@@ -1,3 +1,5 @@
+import '../styles/index/skills.css'
+
 function Skills () {
   return (
     <section className="skills" id="skills" aria-labelledby="skills-heading">

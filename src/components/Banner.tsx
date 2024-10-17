@@ -1,3 +1,5 @@
+import '../styles/index/banner.css'
+
 function Banner () {
   return (
     <section className="banner" id="projects" aria-labelledby="projects-heading">

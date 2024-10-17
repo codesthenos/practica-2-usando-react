@@ -1,3 +1,5 @@
+import '../styles/index/header-burger-menu.css'
+
 function Header () {
   return (
     <header className="body-header">

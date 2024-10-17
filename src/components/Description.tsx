@@ -1,3 +1,5 @@
+import '../styles/index/description.css'
+
 function Description () {
   return (
     <section

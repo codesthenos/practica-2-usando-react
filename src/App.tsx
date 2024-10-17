@@ -5,15 +5,6 @@ import Banner from "./components/Banner.tsx"
 import Contact from "./components/Contact.tsx"
 import Footer from "./components/Footer.tsx"
 
-import './styles/common/normalize.css'
-import './styles/common/variables.css'
-import './styles/index/header-burger-menu.css'
-import './styles/index/description.css'
-import './styles/index/skills.css'
-import './styles/index/banner.css'
-import './styles/index/contact.css'
-import './styles/common/footer.css'
-
 function App () {
   return (
     <>

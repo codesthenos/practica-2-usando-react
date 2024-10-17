@@ -1,3 +1,5 @@
+import '../styles/index/contact.css'
+
 function Contact () {
   return (
     <section
