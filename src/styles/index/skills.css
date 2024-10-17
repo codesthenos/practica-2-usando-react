@@ -1,0 +1,84 @@
+main {
+  .skills {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    h2, h4 {
+      margin: 0;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      padding-top: 1rem;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+      place-content: center;
+      gap: 1.5rem;
+      li {
+        > h4 {
+          padding-bottom: .5rem;
+        }
+        .total-progress {
+          width: 100%;
+          max-width: 375px;
+          height: 1rem;
+          border: 1px var(--color) solid;
+          border-radius: 10px;
+          position: relative;
+          .current-progress {
+            height: 99%;
+            background-color: var(--brand-color);
+            border-radius: 10px;
+            animation: fill-current-progress 3s linear forwards;
+          }
+          #git-github-progress {
+            width: 50%;
+            --progress: 50%
+          }
+          #html-progress {
+            width: 65%;
+            --progress: 65%
+          }
+          #css-progress {
+            width: 55%;
+            --progress: 55%
+          }
+          #javascript-progress {
+            width: 80%;
+            --progress: 80%
+          }
+          #nodejs-progress {
+            width: 25%;
+            --progress: 25%
+          }
+          #reactjs-progress {
+            width: 35%;
+            --progress: 35%
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fill-current-progress {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: var(--progress);
+    }
+  }
+}
+
+@media (width > 1024px) {
+  main {
+    .skills {
+      ul {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

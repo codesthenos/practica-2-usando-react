@@ -1,0 +1,109 @@
+.footer {
+  /* with this we make the footer sticky like and behave like the header,
+     but like in the header we then had to add a media querie to change
+     the background color we are adding here, but using --bg-color-light -scheme
+  position: sticky;
+  bottom: 0;
+  background-color: var(--bg-color-dark-scheme);
+  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  div, nav {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    p {
+      margin: 0;
+      span {
+        font-style: italic;
+      }
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;  
+      .wide-logo {
+        position: absolute;
+        opacity: 0;
+        animation: fade-out .5s ease-in forwards;
+      }
+      .narrow-logo {
+        animation: fade-in .5s ease-in forwards;
+      }
+      .wide-github-logo {
+        transform: translateX(2rem);
+        transition: transform .5s ease-in;
+      }
+      img {
+        max-height: 2.5rem;
+      }
+    }
+  }
+}
+/*Media querie to show the creator at the right, and Kevin in the left, his teacher*/
+@media (width > 450px) {
+  .footer {
+    .block {
+      display: block;
+    }
+  }
+}
+/*Media querie to show add 'special thanks' and the 'almost all rights reserved'*/
+@media (width > 730px) {
+  .footer {
+    .inline-block {
+      display: inline-block;
+    }
+  }
+}
+/*Media querie to add the footer icons animations*/
+@media (prefers-reduced-motion: no-preference) {
+  @media (width > 1024px) {
+    .footer {
+      nav {
+        ul {
+          li:hover {
+            .narrow-logo {
+              animation: fade-out .5s ease-out forwards;
+            }
+            .wide-logo {
+              animation: fade-in 1.5s ease-in forwards;
+            }    
+            .wide-github-logo {
+              transform: translateX(-2rem);
+              transition: transform .75s ease-in;
+            }    
+            + li .narrow-linkedin-logo {
+              transform: translateX(1rem);
+              transition: transform .75s ease-in;
+            }
+          }
+        }
+      }
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+}
