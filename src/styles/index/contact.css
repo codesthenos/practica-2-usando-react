@@ -7,6 +7,9 @@ main {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      color-scheme: none;
+      line-height: 1.15;
+      text-align: left;
       .group-2-fields {
         display: flex;
         flex-direction: column;

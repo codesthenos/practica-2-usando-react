@@ -1,5 +1,3 @@
-import '../styles/common/footer.css'
-
 function Footer () {
   return (
     <footer className="footer">
@@ -14,7 +12,7 @@ function Footer () {
             aria-label="Kevin's Github profile"
             title="to Kevin's Github profile"
           >
-            <strong>@kevinccbsg</strong>
+            <strong> @kevinccbsg</strong>
           </a>
         </p>
       </div>
