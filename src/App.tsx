@@ -7,7 +7,6 @@ import Footer from "./components/Footer.tsx"
 
 import './styles/common/normalize.css'
 import './styles/common/variables.css'
-import './styles/common/body.css'
 import './styles/index/header-burger-menu.css'
 import './styles/index/description.css'
 import './styles/index/skills.css'
