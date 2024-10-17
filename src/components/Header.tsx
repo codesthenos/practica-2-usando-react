@@ -7,14 +7,14 @@ function Header () {
       <img
         className="dark-mode"
         id="white-header-logo"
-        src="/strength-gains-white-icon.png"
+        src={`${import.meta.env.BASE_URL}/strength-gains-white-icon.png`}
         alt="Strength-gains branding logo in white: two people forming a headstand pyramid."
       />
 
       <img
         className="light-mode"
         id="dark-header-logo"
-        src="/strength-gains-dark-icon.png"
+        src={`${import.meta.env.BASE_URL}/strength-gains-dark-icon.png`}
         alt="Strength-gains branding logo in dark: two people forming a headstand pyramid."
       />
 

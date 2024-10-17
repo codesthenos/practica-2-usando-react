@@ -34,25 +34,25 @@ function Footer () {
             >
               <img
                 className="light-mode wide-logo wide-github-logo"
-                src="/github-letras-logo-dark.png"
+                src={`${import.meta.env.BASE_URL}/github-letras-logo-dark.png`}
                 alt="Github text logo dark mode"
               />
 
               <img
                 className="light-mode narrow-logo"
-                src="/github-logo-dark.png"
+                src={`${import.meta.env.BASE_URL}/github-logo-dark.png`}
                 alt="Github logo dark mode"
               />
 
               <img
                 className="dark-mode wide-logo wide-github-logo"
-                src="/github-letras-logo-white.png"
+                src={`${import.meta.env.BASE_URL}/github-letras-logo-white.png`}
                 alt="Github text logo white mode"
               />
 
               <img
                 className="dark-mode narrow-logo"
-                src="/github-logo-white.png"
+                src={`${import.meta.env.BASE_URL}/github-logo-white.png`}
                 alt="Github logo white mode"
               />
             </a>
@@ -68,25 +68,25 @@ function Footer () {
             >
               <img
                 className="light-mode wide-logo"
-                src="/linkedin-letras-logo-dark.png"
+                src={`${import.meta.env.BASE_URL}/linkedin-letras-logo-dark.png`}
                 alt="LinkedIn text logo dark mode"
               />
 
               <img
                 className="light-mode narrow-logo narrow-linkedin-logo"
-                src="/linkedin-logo-dark.png"
+                src={`${import.meta.env.BASE_URL}/linkedin-logo-dark.png`}
                 alt="LinkedIn logo dark mode"
               />
 
               <img
                 className="dark-mode wide-logo"
-                src="/linkedin-letras-logo-white.png"
+                src={`${import.meta.env.BASE_URL}/linkedin-letras-logo-white.png`}
                 alt="LinkedIn text logo white mode"
               />
 
               <img
                 className="dark-mode narrow-logo narrow-linkedin-logo"
-                src="/linkedin-logo-white.png"
+                src={`${import.meta.env.BASE_URL}/linkedin-logo-white.png`}
                 alt="LinkedIn logo white mode"
               />
             </a>
