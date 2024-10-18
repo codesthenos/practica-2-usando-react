@@ -1,4 +1,4 @@
-main {
+#main {
   flex: 1;
   height: 66vh;
   height: 66dvh;
@@ -59,7 +59,7 @@ main {
 }
 
 @media (width > 767px) {
-  main {
+  #main {
     h1 {
       span {
         color: var(--brand-color);
@@ -70,7 +70,7 @@ main {
 }
 
 @media (width > 1023px) {
-  main {
+  #main {
     flex-direction: row;
   }
 }

@@ -1,5 +1,4 @@
-main {
-  flex: 1;
+#main {
   height: 66vh;
   height: 66dvh;
   display: flex;
@@ -74,7 +73,7 @@ main {
 
 
 @media (width > 767px) {
-  main {
+  #main {
     h1 {
       .error-404 {
         display: none;
