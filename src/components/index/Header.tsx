@@ -1,4 +1,4 @@
-import '../styles/index/header-burger-menu.css'
+import '../../styles/index/header-burger-menu.css'
 
 function Header () {
   return (
