@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="404 error page codesthenos projects" />
+    <meta name="keywords" content="codesthenos projects" />
     <meta
       name="description"
-      content="Guillermo ruiz arranz 404 error page codesthenos projects"
+      content="Guillermo ruiz arranz codesthenos projects"
     />
     <meta
       name="author"
       content="Guillermo ruiz arranz - codesthenos, codesthenos@gmail.com"
     />
-    <title>❌ 404 error ❌</title>
+    <title>Codesthenos' Projects</title>
     <link
       rel="icon"
       type="image/png"
@@ -128,87 +128,97 @@
           justify-content: space-around;
         }
       }
-      /*Main*/
+      /*Video*/
       main {
-        flex: 1;
-        height: 66vh;
-        height: 66dvh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3rem;
-        h1 {
-          order: 1;
-          margin: 0;
-          font-size: 3rem;
-          transition: opacity 1s ease;
-          .error-not-found {
-            display: none;
-          }
-        }
-        figure {
-          order: 2;
-          transition: opacity 1s ease;
-          margin: 0;
-          img {
+        .video {
+          display: flex;
+          justify-content: center;
+          padding-top: 1rem;
+          div {
             width: 100%;
-            max-width: 600px;
-            animation: fade-in-from-left 3s ease-in forwards;
+            padding-bottom: 56.25%;
+            position: relative;
+            iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              animation: fade-in-from-top 2s ease-in-out forwards;
+            }
           }
-        }
-        figure:hover {
-          opacity: 0;
-          + h1 {
-            opacity: 0;
-          }
-          ~ label {
-            text-align: center;
-            animation: fade-in 1s ease forwards;
-            color: var(--brand-color);
-          }
-        }
-        label {
-          position: absolute;
-          font-size: 3rem;
-          font-weight: 600;
-          opacity: 0;
         }
       }
       @media (prefers-reduced-motion: no-preference) {
-        @keyframes fade-in-from-left {
+        @keyframes fade-in-from-top {
           0% {
             opacity: 0;
-            transform: translateX(-100%);
-          }
-          33% {
-            transform: translateX(120%);
-          }
-          66% {
-            transform: translateX(-30%);
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-
-        @keyframes fade-in {
-          0% {
-            opacity: 0;
+            transform: translateY(-100%);
           }
           100% {
             opacity: 1;
           }
         }
       }
-      @media (width > 767px) {
+      @media (width > 768px) {
         main {
-          h1 {
-            .error-404 {
-              display: none;
+          .video {
+            div {
+              padding-bottom: 0;
+              height: 422.438px;
+              width: 751px;
             }
-            .error-not-found {
-              display: inline-block;
+          }
+        }
+      }
+      /*Grid-Projects*/
+      main {
+        .projects {
+          padding: 1rem;
+          .flex-845px {
+            h2 {
+              margin: 0;
+            }
+            .projects-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+              padding-top: 1rem;
+              gap: 1rem;
+              .grid-item {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                font-weight: 600;
+                animation: reveal linear both;
+                animation-timeline: view();
+                animation-range: entry 40%;
+                img {
+                  align-self: center;
+                  justify-self: center;
+                  width: 75%;
+                  padding-bottom: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+      @media (width > 845px) {
+        main {
+          .projects {
+            display: flex;
+            justify-content: center;
+            .flex-845px {
+              width: 795px;
             }
           }
         }
@@ -353,21 +363,117 @@
     </header>
 
     <main role="main">
-      <figure>
-        <img
-          src="/practica-2-usando-react/404-travolta-universe.gif"
-          alt=""
-          decoding="async"
-          lazy="laoding"
-          id="error-gif"
-        />
-        <figcaption class="sr-only">Travolta lost in the universe</figcaption>
-      </figure>
-      <h1>
-        <span class="error-404">ERROR 404</span
-        ><span class="error-not-found"> ERROR NOT FOUND</span>
-      </h1>
-      <label for="error-gif">YOU'RE AS LOST AS TRAVOLTA</label>
+      <section class="video" aria-labelledby="video-heading">
+        <h2 id="video-heading" class="sr-only">VIDEO</h2>
+
+        <div>
+          <iframe
+            src="https://www.youtube.com/embed/HEMvsJTBweY?si=Pa0EOvC7rheS72gu&autoplay=1&mute=1"
+            title="Midudev portfolio tutorial"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            aria-describedby="video-description"
+          ></iframe>
+          <p id="video-description" class="sr-only">
+            tutorial by Midudev on how to create a portfolio website in Spanish.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects" aria-labelledby="projects-heading">
+        <div class="flex-845px">
+          <h2 id="projects-heading">My projects</h2>
+
+          <div class="projects-grid">
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 1 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 1</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 2 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 2</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 3 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 3</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 4 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 4</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 5 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 5</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 6 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 6</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 7 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 7</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

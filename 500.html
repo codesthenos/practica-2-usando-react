@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="404 error page codesthenos projects" />
+    <meta name="keywords" content="500 error page codesthenos projects" />
     <meta
       name="description"
-      content="Guillermo ruiz arranz 404 error page codesthenos projects"
+      content="Guillermo ruiz arranz 500 error page codesthenos projects"
     />
     <meta
       name="author"
       content="Guillermo ruiz arranz - codesthenos, codesthenos@gmail.com"
     />
-    <title>❌ 404 error ❌</title>
+    <title>❌ 500 error ❌</title>
     <link
       rel="icon"
       type="image/png"
@@ -137,80 +137,72 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 3rem;
+        gap: 2rem;
         h1 {
-          order: 1;
           margin: 0;
           font-size: 3rem;
-          transition: opacity 1s ease;
-          .error-not-found {
+          span {
             display: none;
           }
         }
-        figure {
-          order: 2;
-          transition: opacity 1s ease;
-          margin: 0;
-          img {
-            width: 100%;
-            max-width: 600px;
-            animation: fade-in-from-left 3s ease-in forwards;
-          }
+        div {
+          width: 100px;
+          height: 100px;
+          position: relative;
         }
-        figure:hover {
-          opacity: 0;
-          + h1 {
-            opacity: 0;
-          }
-          ~ label {
-            text-align: center;
-            animation: fade-in 1s ease forwards;
-            color: var(--brand-color);
-          }
-        }
-        label {
+        div::before,
+        div::after {
+          content: '';
           position: absolute;
-          font-size: 3rem;
-          font-weight: 600;
-          opacity: 0;
+          top: 0;
+          left: 50%;
+          width: 10px;
+          height: 100%;
+          background-color: rgb(255, 0, 0);
+          transform-origin: center;
+        }
+        div::before {
+          animation: rotation-1 2s ease forwards;
+        }
+        div::after {
+          animation: rotation-2 1s ease forwards;
         }
       }
+
       @media (prefers-reduced-motion: no-preference) {
-        @keyframes fade-in-from-left {
+        @keyframes rotation-1 {
           0% {
-            opacity: 0;
-            transform: translateX(-100%);
-          }
-          33% {
-            transform: translateX(120%);
-          }
-          66% {
-            transform: translateX(-30%);
+            transform: translateY(-60%);
           }
           100% {
-            opacity: 1;
+            transform: rotate(45deg);
           }
         }
 
-        @keyframes fade-in {
+        @keyframes rotation-2 {
           0% {
-            opacity: 0;
+            transform: translateY(30%);
           }
           100% {
-            opacity: 1;
+            transform: rotate(-45deg);
           }
         }
       }
+
       @media (width > 767px) {
         main {
           h1 {
-            .error-404 {
-              display: none;
-            }
-            .error-not-found {
+            span {
+              color: var(--brand-color);
               display: inline-block;
             }
           }
+        }
+      }
+
+      @media (width > 1023px) {
+        main {
+          flex-direction: row;
         }
       }
       /*Footer*/
@@ -353,21 +345,9 @@
     </header>
 
     <main role="main">
-      <figure>
-        <img
-          src="/practica-2-usando-react/404-travolta-universe.gif"
-          alt=""
-          decoding="async"
-          lazy="laoding"
-          id="error-gif"
-        />
-        <figcaption class="sr-only">Travolta lost in the universe</figcaption>
-      </figure>
-      <h1>
-        <span class="error-404">ERROR 404</span
-        ><span class="error-not-found"> ERROR NOT FOUND</span>
-      </h1>
-      <label for="error-gif">YOU'RE AS LOST AS TRAVOLTA</label>
+      <div></div>
+      <h1>500 <span>INTERNAL SERVER</span> ERROR</h1>
+      <div></div>
     </main>
 
     <footer class="footer">
