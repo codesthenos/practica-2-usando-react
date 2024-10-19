@@ -47,17 +47,21 @@
 }
 /*Media querie to show the creator at the right, and Kevin in the left, his teacher*/
 @media (width > 450px) {
-  .footer {
-    .block {
-      display: block;
+  #root {
+    .footer {
+      .block {
+        display: block;
+      }
     }
   }
 }
 /*Media querie to show add 'special thanks' and the 'almost all rights reserved'*/
 @media (width > 730px) {
-  .footer {
-    .inline-block {
-      display: inline-block;
+  #root {
+    .footer {
+      .inline-block {
+        display: inline-block;
+      }
     }
   }
 }

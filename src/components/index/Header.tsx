@@ -2,7 +2,7 @@ import '../../styles/index/header-burger-menu.css'
 
 function Header () {
   return (
-    <header className="body-header">
+    <header className="indexHeader">
       <h1 className="sr-only">CODESTHENOS PORTFOLIO</h1>
       <img
         className="dark-mode"

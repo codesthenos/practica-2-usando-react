@@ -1,8 +1,8 @@
-import '../../styles/Error404/main.css'
+import '../../styles/Error/main404.css'
 
 function Main () {
   return (
-    <main id="main" role="main">
+    <main id="main404" role="main">
       <figure>
         <img
           src={`${import.meta.env.BASE_URL}/404-travolta-universe.gif`}

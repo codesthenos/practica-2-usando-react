@@ -1,6 +1,6 @@
 // @ts-expect-error the following dependency has no types
 import { Link } from 'codesthenos-07-midu-router'
-import '../../styles/Error500/header.css'
+import '../../styles/common/header.css'
 
 function Header () {
   return (

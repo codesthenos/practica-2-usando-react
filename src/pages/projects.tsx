@@ -6,7 +6,7 @@ function Projects () {
   return (
     <>
       <Header />
-      <main role='main'>
+      <main id='projectsMain' role='main'>
         <Video />
         <ProjectsGrid />   
       </main>

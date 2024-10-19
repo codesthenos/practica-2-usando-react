@@ -1,4 +1,4 @@
-main {
+#mainIndex {
   .banner {
     height: 33vh;
     height: 33dvh;
@@ -27,7 +27,7 @@ main {
 }
 
 @media (width > 836px) {
-  main {
+  #mainIndex {
     .banner {
       height: 50vh;
       height: 50dvh;

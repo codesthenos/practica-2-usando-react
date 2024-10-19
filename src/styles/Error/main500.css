@@ -1,11 +1,4 @@
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
-}
-
-#main {
+#main500 {
   flex: 1;
   height: 66vh;
   height: 66dvh;
@@ -66,7 +59,7 @@
 }
 
 @media (width > 767px) {
-  #main {
+  #main500 {
     h1 {
       span {
         color: var(--brand-color);

@@ -1,4 +1,4 @@
-main {
+#mainIndex {
   .skills {
     padding: 1rem;
     max-width: 1200px;
@@ -74,7 +74,7 @@ main {
 }
 
 @media (width > 1024px) {
-  main {
+  #mainIndex {
     .skills {
       ul {
         grid-template-columns: repeat(3, 1fr);

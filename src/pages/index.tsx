@@ -8,7 +8,7 @@ function Index () {
   return (
     <>
       <Header />
-      <main role='main'>
+      <main id='mainIndex' role='main'>
         <Description />
         <Skills />
         <Banner />
