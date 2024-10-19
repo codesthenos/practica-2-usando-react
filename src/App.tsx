@@ -8,9 +8,10 @@ import Footer from './components/Footer/Footer.tsx'
 
 function App () {
   return (
-    <>    
-      <Router defaultComponent={Error404}>
-        <Route path='/practica-2-usando-react/' Component={Index} />
+    <>
+      {/* <-- Here Error404, but in gh-pages SPAs doesnt work, so this routing is not working, managed routing with vite-plugin */}
+      <Router defaultComponent={Index}>
+        <Route path='/practica-2-usando-react/' Component={Error404} />
         <Route path='/practica-2-usando-react/projects' Component={Projects} />
         <Route path='/practica-2-usando-react/500' Component={Error500} />
       </Router>

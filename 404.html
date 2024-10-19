@@ -1,10 +1,472 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="404 error page codesthenos projects" />
     <meta
-      http-equiv="refresh"
-      content="0; url=/practica-2-usando-react/index.html"
+      name="description"
+      content="Guillermo ruiz arranz 404 error page codesthenos projects"
     />
+    <meta
+      name="author"
+      content="Guillermo ruiz arranz - codesthenos, codesthenos@gmail.com"
+    />
+    <title>❌ 404 error ❌</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/practica-2-usando-react/strength-gains-white-icon.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/practica-2-usando-react/strength-gains-dark-icon.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <style>
+      /*Variables*/
+      :root {
+        --bg-color: #2c2d2e;
+        --color: #e9f0f1;
+        --brand-color: #32a852;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg-color: #f5f5f5;
+          --color: #111;
+        }
+      }
+      /*Body*/
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        min-height: 100dvh;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        background-color: var(--bg-color);
+        color: var(--color);
+        .light-mode {
+          display: none;
+        }
+        .dark-mode {
+          display: block;
+        }
+        .link {
+          text-decoration: none;
+          color: var(--brand-color);
+          font-weight: 600;
+          cursor: pointer;
+          transition: 1s ease-in-out;
+        }
+        .link:hover {
+          opacity: 0.7;
+        }
+        .button {
+          color: var(--color);
+          border: 1px solid var(--color);
+          background-color: var(--brand-color);
+          font-weight: 600;
+          cursor: pointer;
+          text-decoration: none;
+          border-radius: 8px;
+          padding: 1rem;
+          display: inline-block;
+          transition: opacity 1s ease-in-out;
+        }
+        .button:hover {
+          opacity: 0.7;
+        }
+        .block,
+        .inline-block {
+          display: none;
+        }
+        .sr-only {
+          position: absolute;
+          clip: rect(1px, 1px, 1px, 1px);
+          -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+          height: 1px;
+          width: 1px;
+          padding: 0;
+          border: 0;
+          margin: -1px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        body {
+          .light-mode {
+            display: block;
+          }
+          .dark-mode {
+            display: none;
+          }
+        }
+      }
+      /*Header*/
+      .body-header {
+        position: sticky;
+        top: -1px;
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        z-index: 99;
+        img {
+          max-height: 3.5rem;
+        }
+      }
+      @media (width > 1900px) {
+        .body-header {
+          justify-content: space-around;
+        }
+      }
+      /*Main*/
+      main {
+        flex: 1;
+        height: 66vh;
+        height: 66dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        h1 {
+          order: 1;
+          margin: 0;
+          font-size: 3rem;
+          transition: opacity 1s ease;
+          .error-not-found {
+            display: none;
+          }
+        }
+        figure {
+          order: 2;
+          transition: opacity 1s ease;
+          margin: 0;
+          img {
+            width: 100%;
+            max-width: 600px;
+            animation: fade-in-from-left 3s ease-in forwards;
+          }
+        }
+        figure:hover {
+          opacity: 0;
+          + h1 {
+            opacity: 0;
+          }
+          ~ label {
+            text-align: center;
+            animation: fade-in 1s ease forwards;
+            color: var(--brand-color);
+          }
+        }
+        label {
+          position: absolute;
+          font-size: 3rem;
+          font-weight: 600;
+          opacity: 0;
+        }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        @keyframes fade-in-from-left {
+          0% {
+            opacity: 0;
+            transform: translateX(-100%);
+          }
+          33% {
+            transform: translateX(120%);
+          }
+          66% {
+            transform: translateX(-30%);
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fade-in {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+      @media (width > 767px) {
+        main {
+          h1 {
+            .error-404 {
+              display: none;
+            }
+            .error-not-found {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      /*Footer*/
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        div,
+        nav {
+          margin: 0;
+          flex: 1;
+          text-align: center;
+          p {
+            margin: 0;
+            span {
+              font-style: italic;
+            }
+          }
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            .wide-logo {
+              position: absolute;
+              opacity: 0;
+              animation: fade-out 0.5s ease-in forwards;
+            }
+            .narrow-logo {
+              animation: fade-in 0.5s ease-in forwards;
+            }
+            .wide-github-logo {
+              transform: translateX(2rem);
+              transition: transform 0.5s ease-in;
+            }
+            img {
+              max-height: 2.5rem;
+            }
+          }
+        }
+      }
+      /*Media querie to show the creator at the right, and Kevin in the left, his teacher*/
+      @media (width > 450px) {
+        #root {
+          .footer {
+            .block {
+              display: block;
+            }
+          }
+        }
+      }
+      /*Media querie to show add 'special thanks' and the 'almost all rights reserved'*/
+      @media (width > 730px) {
+        #root {
+          .footer {
+            .inline-block {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      /*Media querie to add the footer icons animations*/
+      @media (prefers-reduced-motion: no-preference) {
+        @media (width > 1024px) {
+          .footer {
+            nav {
+              ul {
+                li:hover {
+                  .narrow-logo {
+                    animation: fade-out 0.5s ease-out forwards;
+                  }
+                  .wide-logo {
+                    animation: fade-in 1.5s ease-in forwards;
+                  }
+                  .wide-github-logo {
+                    transform: translateX(-2rem);
+                    transition: transform 0.75s ease-in;
+                  }
+                  + li .narrow-linkedin-logo {
+                    transform: translateX(1rem);
+                    transition: transform 0.75s ease-in;
+                  }
+                }
+              }
+            }
+          }
+        }
+        @keyframes fade-in {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fade-out {
+          0% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header class="body-header">
+      <img
+        class="dark-mode"
+        id="white-header-logo"
+        src="/practica-2-usando-react/strength-gains-white-icon.png"
+        alt="Strength-gains branding logo in white: two people forming a headstand pyramid."
+      />
+      <img
+        class="light-mode"
+        id="dark-header-logo"
+        src="/practica-2-usando-react/strength-gains-dark-icon.png"
+        alt="Strength-gains branding logo in dark: two people forming a headstand pyramid."
+      />
+
+      <h1 class="sr-only">CODESTHENOS' PROJECTS</h1>
+
+      <nav aria-label="Back to landing page navigation" role="navigation">
+        <a
+          aria-label="Navigate back to landing page"
+          class="button"
+          href="/practica-2-usando-react/"
+          title="to landing page"
+        >
+          To Home
+        </a>
+      </nav>
+    </header>
+
+    <main role="main">
+      <figure>
+        <img
+          src="/practica-2-usando-react/404-travolta-universe.gif"
+          alt=""
+          decoding="async"
+          lazy="laoding"
+          id="error-gif"
+        />
+        <figcaption class="sr-only">Travolta lost in the universe</figcaption>
+      </figure>
+      <h1>
+        <span class="error-404">ERROR 404</span
+        ><span class="error-not-found"> ERROR NOT FOUND</span>
+      </h1>
+      <label for="error-gif">YOU'RE AS LOST AS TRAVOLTA</label>
+    </main>
+
+    <footer class="footer">
+      <div class="block">
+        <p>
+          <span class="inline-block">Special thanks</span> to
+          <a
+            class="link"
+            href="https://github.com/kevinccbsg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Kevin's Github profile"
+            title="to Kevin's Github profile"
+          >
+            <strong>@kevinccbsg</strong>
+          </a>
+        </p>
+      </div>
+
+      <nav
+        aria-label="Footer navigation to my social networks"
+        role="navigation"
+      >
+        <ul>
+          <li>
+            <a
+              href="https://github.com/codesthenos"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Codestheno's Github profile"
+              title="to Codesthenos' Github profile"
+            >
+              <img
+                class="light-mode wide-logo wide-github-logo"
+                src="/practica-2-usando-react/github-letras-logo-dark.png"
+                alt="Github text logo dark mode"
+              />
+
+              <img
+                class="light-mode narrow-logo"
+                src="/practica-2-usando-react/github-logo-dark.png"
+                alt="Github logo dark mode"
+              />
+
+              <img
+                class="dark-mode wide-logo wide-github-logo"
+                src="/practica-2-usando-react/github-letras-logo-white.png"
+                alt="Github text logo white mode"
+              />
+
+              <img
+                class="dark-mode narrow-logo"
+                src="/practica-2-usando-react/github-logo-white.png"
+                alt="Github logo white mode"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/codesthenos"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Codestheno's linkedIn profile"
+              title="to Codesthenos' LinkedIn profile"
+            >
+              <img
+                class="light-mode wide-logo"
+                src="/practica-2-usando-react/linkedin-letras-logo-dark.png"
+                alt="LinkedIn text logo dark mode"
+              />
+
+              <img
+                class="light-mode narrow-logo narrow-linkedin-logo"
+                src="/practica-2-usando-react/linkedin-logo-dark.png"
+                alt="LinkedIn logo dark mode"
+              />
+
+              <img
+                class="dark-mode wide-logo"
+                src="/practica-2-usando-react/linkedin-letras-logo-white.png"
+                alt="LinkedIn text logo white mode"
+              />
+
+              <img
+                class="dark-mode narrow-logo narrow-linkedin-logo"
+                src="/practica-2-usando-react/linkedin-logo-white.png"
+                alt="LinkedIn logo white mode"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="block">
+        <p>
+          © <strong>codesthenos</strong>
+          <span class="inline-block">Almost all rights reserved | 2024</span>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
