@@ -1,3 +1,5 @@
+// @ts-expect-error the following dependency has no types
+import { Link } from 'codesthenos-07-midu-router'
 import '../../styles/projects/header.css'
 
 function Header () {
@@ -19,14 +21,14 @@ function Header () {
       <h1 className="sr-only">CODESTHENOS PROJECTS</h1>
 
       <nav aria-label="Back to landing page navigation" role="navigation">
-        <a
+        <Link
           aria-label="Navigate back to landing page"
           className="button"
-          href="index.html"
+          to="/practica-2-usando-react/"
           title="to landing page"
         >
           To Home
-        </a>
+        </Link>
       </nav>
     </header>
   )

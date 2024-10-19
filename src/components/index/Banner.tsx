@@ -1,3 +1,5 @@
+// @ts-expect-error the following dependency has no types
+import { Link } from 'codesthenos-07-midu-router'
 import '../../styles/index/banner.css'
 
 function Banner () {
@@ -10,7 +12,7 @@ function Banner () {
         aria-label="Banner image with background illustration."
       ></div>
 
-      <a className="button" href="projects.html">Codesthenos portfolio</a>
+      <Link className="button" to="/practica-2-usando-react/projects">Codesthenos portfolio</Link>
     </section>
   )
 }
