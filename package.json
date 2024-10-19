@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://practica-2-con-react.com",
+  "homepage": "https://codesthenos.github.io/practica-2-usando-react",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
