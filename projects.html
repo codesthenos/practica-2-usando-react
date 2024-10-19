@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="codesthenos projects" />
+    <meta
+      name="description"
+      content="Guillermo ruiz arranz codesthenos projects"
+    />
+    <meta
+      name="author"
+      content="Guillermo ruiz arranz - codesthenos, codesthenos@gmail.com"
+    />
+    <title>Codesthenos' Projects</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/practica-2-usando-react/strength-gains-white-icon.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/practica-2-usando-react/strength-gains-dark-icon.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <style>
+      /*Variables*/
+      :root {
+        --bg-color: #2c2d2e;
+        --color: #e9f0f1;
+        --brand-color: #32a852;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg-color: #f5f5f5;
+          --color: #111;
+        }
+      }
+      /*Body*/
+      body {
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        min-height: 100dvh;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        background-color: var(--bg-color);
+        color: var(--color);
+        .light-mode {
+          display: none;
+        }
+        .dark-mode {
+          display: block;
+        }
+        .link {
+          text-decoration: none;
+          color: var(--brand-color);
+          font-weight: 600;
+          cursor: pointer;
+          transition: 1s ease-in-out;
+        }
+        .link:hover {
+          opacity: 0.7;
+        }
+        .button {
+          color: var(--color);
+          border: 1px solid var(--color);
+          background-color: var(--brand-color);
+          font-weight: 600;
+          cursor: pointer;
+          text-decoration: none;
+          border-radius: 8px;
+          padding: 1rem;
+          display: inline-block;
+          transition: opacity 1s ease-in-out;
+        }
+        .button:hover {
+          opacity: 0.7;
+        }
+        .block,
+        .inline-block {
+          display: none;
+        }
+        .sr-only {
+          position: absolute;
+          clip: rect(1px, 1px, 1px, 1px);
+          -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+          height: 1px;
+          width: 1px;
+          padding: 0;
+          border: 0;
+          margin: -1px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        body {
+          .light-mode {
+            display: block;
+          }
+          .dark-mode {
+            display: none;
+          }
+        }
+      }
+      /*Header*/
+      .body-header {
+        position: sticky;
+        top: -1px;
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        z-index: 99;
+        img {
+          max-height: 3.5rem;
+        }
+      }
+      @media (width > 1900px) {
+        .body-header {
+          justify-content: space-around;
+        }
+      }
+      /*Video*/
+      main {
+        .video {
+          display: flex;
+          justify-content: center;
+          padding-top: 1rem;
+          div {
+            width: 100%;
+            padding-bottom: 56.25%;
+            position: relative;
+            iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              animation: fade-in-from-top 2s ease-in-out forwards;
+            }
+          }
+        }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        @keyframes fade-in-from-top {
+          0% {
+            opacity: 0;
+            transform: translateY(-100%);
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+      @media (width > 768px) {
+        main {
+          .video {
+            div {
+              padding-bottom: 0;
+              height: 422.438px;
+              width: 751px;
+            }
+          }
+        }
+      }
+      /*Grid-Projects*/
+      main {
+        .projects {
+          padding: 1rem;
+          .flex-845px {
+            h2 {
+              margin: 0;
+            }
+            .projects-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+              padding-top: 1rem;
+              gap: 1rem;
+              .grid-item {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                font-weight: 600;
+                animation: reveal linear both;
+                animation-timeline: view();
+                animation-range: entry 40%;
+                img {
+                  align-self: center;
+                  justify-self: center;
+                  width: 75%;
+                  padding-bottom: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+      @media (width > 845px) {
+        main {
+          .projects {
+            display: flex;
+            justify-content: center;
+            .flex-845px {
+              width: 795px;
+            }
+          }
+        }
+      }
+      /*Footer*/
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        div,
+        nav {
+          margin: 0;
+          flex: 1;
+          text-align: center;
+          p {
+            margin: 0;
+            span {
+              font-style: italic;
+            }
+          }
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            .wide-logo {
+              position: absolute;
+              opacity: 0;
+              animation: fade-out 0.5s ease-in forwards;
+            }
+            .narrow-logo {
+              animation: fade-in 0.5s ease-in forwards;
+            }
+            .wide-github-logo {
+              transform: translateX(2rem);
+              transition: transform 0.5s ease-in;
+            }
+            img {
+              max-height: 2.5rem;
+            }
+          }
+        }
+      }
+      /*Media querie to show the creator at the right, and Kevin in the left, his teacher*/
+      @media (width > 450px) {
+        #root {
+          .footer {
+            .block {
+              display: block;
+            }
+          }
+        }
+      }
+      /*Media querie to show add 'special thanks' and the 'almost all rights reserved'*/
+      @media (width > 730px) {
+        #root {
+          .footer {
+            .inline-block {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      /*Media querie to add the footer icons animations*/
+      @media (prefers-reduced-motion: no-preference) {
+        @media (width > 1024px) {
+          .footer {
+            nav {
+              ul {
+                li:hover {
+                  .narrow-logo {
+                    animation: fade-out 0.5s ease-out forwards;
+                  }
+                  .wide-logo {
+                    animation: fade-in 1.5s ease-in forwards;
+                  }
+                  .wide-github-logo {
+                    transform: translateX(-2rem);
+                    transition: transform 0.75s ease-in;
+                  }
+                  + li .narrow-linkedin-logo {
+                    transform: translateX(1rem);
+                    transition: transform 0.75s ease-in;
+                  }
+                }
+              }
+            }
+          }
+        }
+        @keyframes fade-in {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fade-out {
+          0% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="body-header">
+      <img
+        class="dark-mode"
+        id="white-header-logo"
+        src="/practica-2-usando-react/strength-gains-white-icon.png"
+        alt="Strength-gains branding logo in white: two people forming a headstand pyramid."
+      />
+      <img
+        class="light-mode"
+        id="dark-header-logo"
+        src="/practica-2-usando-react/strength-gains-dark-icon.png"
+        alt="Strength-gains branding logo in dark: two people forming a headstand pyramid."
+      />
+
+      <h1 class="sr-only">CODESTHENOS' PROJECTS</h1>
+
+      <nav aria-label="Back to landing page navigation" role="navigation">
+        <a
+          aria-label="Navigate back to landing page"
+          class="button"
+          href="/practica-2-usando-react/"
+          title="to landing page"
+        >
+          To Home
+        </a>
+      </nav>
+    </header>
+
+    <main role="main">
+      <section class="video" aria-labelledby="video-heading">
+        <h2 id="video-heading" class="sr-only">VIDEO</h2>
+
+        <div>
+          <iframe
+            src="https://www.youtube.com/embed/HEMvsJTBweY?si=Pa0EOvC7rheS72gu&autoplay=1&mute=1"
+            title="Midudev portfolio tutorial"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            aria-describedby="video-description"
+          ></iframe>
+          <p id="video-description" class="sr-only">
+            tutorial by Midudev on how to create a portfolio website in Spanish.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects" aria-labelledby="projects-heading">
+        <div class="flex-845px">
+          <h2 id="projects-heading">My projects</h2>
+
+          <div class="projects-grid">
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 1 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 1</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 2 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 2</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 3 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 3</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 4 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 4</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 5 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 5</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 6 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 6</figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img
+                src="/practica-2-usando-react/bannerHD.png"
+                alt="Project 7 screenshot"
+                srcset="
+                  /practica-2-usando-react/bannerHD-424.png   424w,
+                  /practica-2-usando-react/bannerHD-867.png   867w,
+                  /practica-2-usando-react/bannerHD-1023.png 1023w
+                "
+              />
+              <figcaption>Project 7</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="block">
+        <p>
+          <span class="inline-block">Special thanks</span> to
+          <a
+            class="link"
+            href="https://github.com/kevinccbsg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Kevin's Github profile"
+            title="to Kevin's Github profile"
+          >
+            <strong>@kevinccbsg</strong>
+          </a>
+        </p>
+      </div>
+
+      <nav
+        aria-label="Footer navigation to my social networks"
+        role="navigation"
+      >
+        <ul>
+          <li>
+            <a
+              href="https://github.com/codesthenos"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Codestheno's Github profile"
+              title="to Codesthenos' Github profile"
+            >
+              <img
+                class="light-mode wide-logo wide-github-logo"
+                src="/practica-2-usando-react/github-letras-logo-dark.png"
+                alt="Github text logo dark mode"
+              />
+
+              <img
+                class="light-mode narrow-logo"
+                src="/practica-2-usando-react/github-logo-dark.png"
+                alt="Github logo dark mode"
+              />
+
+              <img
+                class="dark-mode wide-logo wide-github-logo"
+                src="/practica-2-usando-react/github-letras-logo-white.png"
+                alt="Github text logo white mode"
+              />
+
+              <img
+                class="dark-mode narrow-logo"
+                src="/practica-2-usando-react/github-logo-white.png"
+                alt="Github logo white mode"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/codesthenos"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Codestheno's linkedIn profile"
+              title="to Codesthenos' LinkedIn profile"
+            >
+              <img
+                class="light-mode wide-logo"
+                src="/practica-2-usando-react/linkedin-letras-logo-dark.png"
+                alt="LinkedIn text logo dark mode"
+              />
+
+              <img
+                class="light-mode narrow-logo narrow-linkedin-logo"
+                src="/practica-2-usando-react/linkedin-logo-dark.png"
+                alt="LinkedIn logo dark mode"
+              />
+
+              <img
+                class="dark-mode wide-logo"
+                src="/practica-2-usando-react/linkedin-letras-logo-white.png"
+                alt="LinkedIn text logo white mode"
+              />
+
+              <img
+                class="dark-mode narrow-logo narrow-linkedin-logo"
+                src="/practica-2-usando-react/linkedin-logo-white.png"
+                alt="LinkedIn logo white mode"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="block">
+        <p>
+          © <strong>codesthenos</strong>
+          <span class="inline-block">Almost all rights reserved | 2024</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
