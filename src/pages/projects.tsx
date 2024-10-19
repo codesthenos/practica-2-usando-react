@@ -1,4 +1,4 @@
-import Header from '../components/projects/Header'
+import Header from '../components/Header/Header'
 import ProjectsGrid from '../components/projects/ProjectsGrid'
 import Video from '../components/projects/Video'
 

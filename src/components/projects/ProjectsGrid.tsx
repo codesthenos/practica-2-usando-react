@@ -1,4 +1,5 @@
 import '../../styles/projects/projects.css'
+import GridItem from './GridItem'
 
 function ProjectsGrid () {
   return (
@@ -7,90 +8,15 @@ function ProjectsGrid () {
         <h2 id="projects-heading">My projects</h2>
 
         <div className="projects-grid">
-          <figure className="grid-item">
-            <img
-              src={`${import.meta.env.BASE_URL}/bannerHD.png`}
-              alt="Project 1 screenshot"
-              srcSet={`
-                  ${import.meta.env.BASE_URL}/bannerHD-424.png   424w,
-                  ${import.meta.env.BASE_URL}/bannerHD-867.png   867w,
-                  ${import.meta.env.BASE_URL}/bannerHD-1023.png 1023w
-                `}
-            />
-            <figcaption>Project 1</figcaption>
-          </figure>
-          <figure className="grid-item">
-            <img
-              src={`${import.meta.env.BASE_URL}/bannerHD.png`}
-              alt="Project 2 screenshot"
-              srcSet={`
-                  ${import.meta.env.BASE_URL}/bannerHD-424.png   424w,
-                  ${import.meta.env.BASE_URL}/bannerHD-867.png   867w,
-                  ${import.meta.env.BASE_URL}/bannerHD-1023.png 1023w
-                `}
-            />
-            <figcaption>Project 2</figcaption>
-          </figure>
-          <figure className="grid-item">
-            <img
-              src={`${import.meta.env.BASE_URL}/bannerHD.png`}
-              alt="Project 3 screenshot"
-              srcSet={`
-                  ${import.meta.env.BASE_URL}/bannerHD-424.png   424w,
-                  ${import.meta.env.BASE_URL}/bannerHD-867.png   867w,
-                  ${import.meta.env.BASE_URL}/bannerHD-1023.png 1023w
-                `}
-            />
-            <figcaption>Project 3</figcaption>
-          </figure>
-          <figure className="grid-item">
-            <img
-              src={`${import.meta.env.BASE_URL}/bannerHD.png`}
-              alt="Project 4 screenshot"
-              srcSet={`
-                  ${import.meta.env.BASE_URL}/bannerHD-424.png   424w,
-                  ${import.meta.env.BASE_URL}/bannerHD-867.png   867w,
-                  ${import.meta.env.BASE_URL}/bannerHD-1023.png 1023w
-                `}
-            />
-            <figcaption>Project 4</figcaption>
-          </figure>
-          <figure className="grid-item">
-            <img
-              src={`${import.meta.env.BASE_URL}/bannerHD.png`}
-              alt="Project 5 screenshot"
-              srcSet={`
-                  ${import.meta.env.BASE_URL}/bannerHD-424.png   424w,
-                  ${import.meta.env.BASE_URL}/bannerHD-867.png   867w,
-                  ${import.meta.env.BASE_URL}/bannerHD-1023.png 1023w
-                `}
-            />
-            <figcaption>Project 5</figcaption>
-          </figure>
-          <figure className="grid-item">
-            <img
-              src={`${import.meta.env.BASE_URL}/bannerHD.png`}
-              alt="Project 6 screenshot"
-              srcSet={`
-                  ${import.meta.env.BASE_URL}/bannerHD-424.png   424w,
-                  ${import.meta.env.BASE_URL}/bannerHD-867.png   867w,
-                  ${import.meta.env.BASE_URL}/bannerHD-1023.png 1023w
-                `}
-            />
-            <figcaption>Project 6</figcaption>
-          </figure>
-          <figure className="grid-item">
-            <img
-              src={`${import.meta.env.BASE_URL}/bannerHD.png`}
-              alt="Project 7 screenshot"
-              srcSet={`
-                  ${import.meta.env.BASE_URL}/bannerHD-424.png   424w,
-                  ${import.meta.env.BASE_URL}/bannerHD-867.png   867w,
-                  ${import.meta.env.BASE_URL}/bannerHD-1023.png 1023w
-                `}
-            />
-            <figcaption>Project 7</figcaption>
-          </figure>
+          <GridItem projectTitle='Project 1' image1='bannerHD.png' image2='bannerHD-424.png' image3='bannerHD-867.png' image4='bannerHD-1023.png' />
+          <GridItem projectTitle='Project 2' image1='bannerHD.png' image2='bannerHD-424.png' image3='bannerHD-867.png' image4='bannerHD-1023.png' />
+          <GridItem projectTitle='Project 3' image1='bannerHD.png' image2='bannerHD-424.png' image3='bannerHD-867.png' image4='bannerHD-1023.png' />
+          <GridItem projectTitle='Project 4' image1='bannerHD.png' image2='bannerHD-424.png' image3='bannerHD-867.png' image4='bannerHD-1023.png' />
+          <GridItem projectTitle='Project 5' image1='bannerHD.png' image2='bannerHD-424.png' image3='bannerHD-867.png' image4='bannerHD-1023.png' />
+          <GridItem projectTitle='Project 6' image1='bannerHD.png' image2='bannerHD-424.png' image3='bannerHD-867.png' image4='bannerHD-1023.png' />
+          <GridItem projectTitle='Project 7' image1='bannerHD.png' image2='bannerHD-424.png' image3='bannerHD-867.png' image4='bannerHD-1023.png' />
+          <GridItem projectTitle='Project 8' image1='bannerHD.png' image2='bannerHD-424.png' image3='bannerHD-867.png' image4='bannerHD-1023.png' />
+          <GridItem projectTitle='Project 9' image1='bannerHD.png' image2='bannerHD-424.png' image3='bannerHD-867.png' image4='bannerHD-1023.png' />
         </div>
       </div>
     </section>
