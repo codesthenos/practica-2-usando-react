@@ -3,7 +3,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+#root.light-mode-button-class {
+  --bg-color: #f5f5f5;
+  --color: #111;
+  .light-mode {
+    display: block;
+  }
+  .dark-mode {
+    display: none;
+  }
+}
 #root {
   height: 100%;
   display: flex;
