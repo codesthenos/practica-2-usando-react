@@ -1,5 +1,5 @@
 import '../../styles/index/skills.css'
-import SkillList from './SkillList.tsx'
+import SkillList from './Skills/SkillList.tsx'
 
 function Skills () {
   return (

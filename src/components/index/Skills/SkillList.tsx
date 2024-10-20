@@ -1,4 +1,4 @@
-import { SKILLS } from '../../consts.ts'
+import { SKILLS } from '../../../consts.ts'
 
 function SkillList () {
   return (
